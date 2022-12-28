@@ -1,0 +1,13 @@
+@article{Schneider1993,
+  doi = {10.2307/2939044},
+  url = {https://doi.org/10.2307/2939044},
+  year = {1993},
+  month = jun,
+  publisher = {Cambridge University Press ({CUP})},
+  volume = {87},
+  number = {2},
+  pages = {334--347},
+  author = {Anne Schneider and Helen Ingram},
+  title = {Social Construction of Target Populations: Implications for Politics and Policy},
+  journal = {American Political Science Review}
+}

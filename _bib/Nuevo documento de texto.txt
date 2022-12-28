@@ -1,0 +1,10 @@
+@article{Cho2014,
+  doi = {10.46743/2160-3715/2014.1028},
+  url = {https://doi.org/10.46743/2160-3715/2014.1028},
+  year = {2014},
+  month = oct,
+  publisher = {Nova Southeastern University},
+  author = {Ji Cho and Eun-Hee Lee},
+  title = {Reducing Confusion about Grounded Theory and Qualitative Content Analysis: Similarities and Differences},
+  journal = {The Qualitative Report}
+}

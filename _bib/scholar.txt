@@ -1,0 +1,6 @@
+@book{long2003development,
+  title={Development sociology: actor perspectives},
+  author={Long, Norman},
+  year={2003},
+  publisher={Routledge}
+}

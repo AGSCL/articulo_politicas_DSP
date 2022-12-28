@@ -1,0 +1,9 @@
+@book{Birkland2019,
+  doi = {10.4324/9781315292335},
+  url = {https://doi.org/10.4324/9781315292335},
+  year = {2019},
+  month = jul,
+  publisher = {Routledge},
+  author = {Thomas A. Birkland},
+  title = {An Introduction to the {POLICY} {PROCESS}}
+}
