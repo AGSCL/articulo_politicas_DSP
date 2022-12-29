@@ -23,7 +23,9 @@ creative_commons: CC BY
 
 -   [Presentation](https://docs.google.com/presentation/d/1cHEjsG1GpMKSC_QJ9f2gBOE_XYjVs7aSV7HfQZqyCZ4/edit)
 
--   [Data in R](./_data/trabajo_20221228.RData)
+-   [Data of sources in R](./_data/trabajo_20221228.RData)
+
+-   [Data of codes and classifications in Nvivo (compressed)](test_droga_parlamentarios.rar)
 
 The flowchart is available here:
 
