@@ -152,12 +152,12 @@ library(rsvg)
 library(DiagrammeRsvg)
 
 plot_grviz %>%
-  export_svg %>% charToRaw %>% rsvg_pdf("./_flowchart4.pdf")
+  export_svg %>% charToRaw %>% rsvg_pdf("./_fig/_flowchart4.pdf")
 plot_grviz %>% export_svg()%>%charToRaw %>% rsvg(width = WidthCM *(DPI/2.54), height = HeightCM *(DPI/2.54)) %>% 
   png::writePNG("./_flowchart_merge_wo_fmt4.png")
 
-htmlwidgets::saveWidget(plot_grviz, "./_flowchart_merge_222_4.html")
-webshot::webshot("./_flowchart_merge_222_4.html","./_flowchart_merge_formatted_4.png",vwidth = 900, vheight = 1200,
+htmlwidgets::saveWidget(plot_grviz, "./_fig/_flowchart_merge_222_4.html")
+webshot::webshot("./_fig/_flowchart_merge_222_4.html","./_fig/_flowchart_merge_formatted_4.png",vwidth = 900, vheight = 1200,
                  zoom = 2)
 
 #save.image("trabajo_20221205.RData")
@@ -167,14 +167,14 @@ bd_noticias3 %>%
   dplyr::filter(!grepl("SACAR",OBS)) %>% 
   dplyr::filter(!grepl("DESCARTAR",OBS))
 
-#save.image("trabajo_20221206.RData")
+#save.image("./_data/trabajo_20221206.RData")
 
-#save.image("trabajo_20221211.RData")
+#save.image("./_data/trabajo_20221211.RData")
 
-#save.image("trabajo_20221227.RData")
+#save.image("./_data/trabajo_20221227.RData")
 
 
-save.image("trabajo_20221228.RData")
+save.image("./_data/trabajo_20221228.RData")
 
 invisible("to check all eliminated articles and see if they have any nodes in Nvivo")
 bd_noticias3 %>% 
