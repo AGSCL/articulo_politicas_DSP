@@ -173,8 +173,10 @@ bd_noticias3 %>%
 
 #save.image("./_data/trabajo_20221227.RData")
 
+rio::export(bd_noticias4,"./_data/articulos.xlsx")
 
 save.image("./_data/trabajo_20221228.RData")
+
 
 invisible("to check all eliminated articles and see if they have any nodes in Nvivo")
 bd_noticias3 %>% 
