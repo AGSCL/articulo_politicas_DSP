@@ -45,33 +45,6 @@ pacman::p_load(survival,
                Hmisc,
                riskRegression,
                timeROC)
-
-# Fit the model without PGR
-efit1 <- coxph(Surv(ryear, rfs) ~ csize + nodes2 + nodes3 + grade3,
-  data = rott5, 
-  x = T, 
-  y = T)
-
-# The model with additional PGR marker
-efit1_pgr  <- update(efit1, . ~ . + pgr2 + pgr3)
-
-# Add linear predictor in the validation set
-gbsg5$lp <- predict(efit1, newdata = gbsg5)
-
-### Harrell and Uno's concordance index 
-# Harrell's C
-
-
-## Validation data
-# Harrell's C
-harrell_C_gbsg5 <- concordance(Surv(ryear, rfs) ~ lp, 
-                               gbsg5, 
-                               reverse = TRUE)
-# Uno's C
-Uno_C_gbsg5 <- concordance(Surv(ryear, rfs) ~ lp, 
-                           gbsg5, 
-                           reverse = TRUE,
-                           timewt = "n/G2")
 ```
 
 </details>
