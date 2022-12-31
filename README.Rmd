@@ -35,4 +35,4 @@ El diagrama de flujo de los datos se presenta a continuación:
 
 ![](_fig/_flowchart_merge_formatted_4.png){width="50%"}
 
-<a href="./_fig/_flowchart_merge_formatted_4.png" target="_blank">Para abrir en una nueva ventana (mayor zoom)</a>
+<a href="https://raw.githubusercontent.com/AGSCL/articulo_politicas_DSP/main/_fig/_flowchart_merge_formatted_4.png" target="_blank">Para abrir en una nueva ventana (mayor zoom)</a>
