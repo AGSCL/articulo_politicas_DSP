@@ -19,11 +19,11 @@ output:
     theme: theme.css
 ---
 
--   [Documento (word)](./_doc/Bajo la influencia de 20221231.docx)
+-   [Documento (word)](https://github.com/AGSCL/articulo_politicas_DSP/blob/main/_doc/Bajo%20la%20influencia%20de%2020221231.docx?raw=true)
 
--   [Planilla de artículos y criterios de selección (Excel)](./_doc/Fuentes.xlsx)
+-   [Planilla de artículos y criterios de selección (Excel)](https://github.com/AGSCL/articulo_politicas_DSP/blob/main/_doc/Fuentes.xlsx?raw=true)
 
--   [Planilla de Codificaciones (Excel)](./_doc/Codificaciones.xlsx)
+-   [Planilla de Codificaciones (Excel)](https://github.com/AGSCL/articulo_politicas_DSP/blob/main/_doc/Codificaciones.xlsx?raw=true)
 
 -   [Presentación (Google slide)](https://docs.google.com/presentation/d/1cHEjsG1GpMKSC_QJ9f2gBOE_XYjVs7aSV7HfQZqyCZ4/edit)
 
