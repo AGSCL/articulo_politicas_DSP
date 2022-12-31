@@ -1,4 +1,5 @@
 library(readxl)
+library(tidyverse)
 NG_Def <- read_excel("_doc/Codificaciones.xlsx", 
                              sheet = "NG_Def")
 NG_Ideo <- read_excel("_doc/Codificaciones.xlsx", 
@@ -39,15 +40,19 @@ NG_Ideo %>% #coalicion=="GOB" #, select="contenido"
   count(coalicion, word, sort = TRUE) %>%
   group_by(coalicion) %>%
   top_n(n = 6, n) %>%
-  ggplot(aes(x = reorder_within(word, n, coalicion), y = n, fill = coalicion)) +
+  ggplot(aes(x = reorder_within(word, n, coalicion), y = n, fill = factor(coalicion))) +
   geom_col(show.legend = FALSE) +
   ylab("") +
   xlab("") +
   coord_flip() +
   facet_wrap(~coalicion, ncol = 2, scales = "free_y") +
   scale_x_reordered() +
-  ggtitle("Palabras más usadas: Debate ideológico")
+ # ggtitle("Palabras más usadas: Debate ideológico")+
+  ylab("Frecuencia de aparición")+
+  scale_fill_manual(values= c("lightgray", "darkgray"))+
+  theme_classic()
 
+ggsave("./_fig/ng_ideo.png", dpi=300)
 
 o_words <- NG_Ideo %>%
   unnest_tokens(input = contenido,
@@ -200,7 +205,11 @@ SI_Contendores %>% #coalicion=="GOB" #, select="contenido"
   coord_flip() +
   facet_wrap(~coalicion, ncol = 2, scales = "free_y") +
   scale_x_reordered() +
-  ggtitle("Palabras más usadas: actor contendor")
+  #ggtitle("Palabras más usadas: actor contendor")+
+  scale_fill_manual(values= c("lightgray", "darkgray"))+
+  theme_classic()
+
+ggsave("./_fig/ng_ideo.png", dpi=300)
 
 o_words <- SI_Contendores %>%
   unnest_tokens(input = contenido,
@@ -218,9 +227,11 @@ SI_Contendores %>%
   top_n(n = 6, n) %>%
   ggplot(aes(x = reorder(word, n), y = n)) +
   geom_col(show.legend = FALSE) +
-  ylab("") + xlab("") +
+  ylab("Frecuencia de aparación")  + xlab("") +
   coord_flip() +
-  ggtitle("Palabras únicas de Gobierno para actor contendor")
+  scale_fill_manual(values= c("lightgray", "darkgray"))+
+  theme_classic() -> fig_gob_si_conten
+  #ggtitle("Palabras únicas de Gobierno para actor contendor")
 
 
 o_words <- SI_Contendores %>%
@@ -241,4 +252,10 @@ SI_Contendores %>%
   geom_col(show.legend = FALSE) +
   ylab("") + xlab("") +
   coord_flip() +
-  ggtitle("Palabras únicas de Oposición para actor contendor")
+  scale_fill_manual(values= c("lightgray", "darkgray"))+
+  theme_classic() -> fig_opos_si_conten
+  #ggtitle("Palabras únicas de Oposición para actor contendor")
+
+
+cowplot::plot_grid(fig_gob_si_conten, fig_opos_si_conten, labels = "AUTO") 
+ggsave("./_fig/si_conten.png", dpi=300)
