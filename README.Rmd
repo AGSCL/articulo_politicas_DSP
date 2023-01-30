@@ -1,6 +1,6 @@
 ---
 name: "repositorio_dsp_ags"
-title: "Artículo Asignatura Políticas DSP"
+title: "Legislando “bajo la influencia...” ¿de qué?"
 lang: es-ES
 subject: R Markdown
 author:
